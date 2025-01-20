@@ -20,6 +20,7 @@ interface Project {
 }
 
 const entries = await contentfulClient.getEntries<Project>({})
+
 ---
 
 <BaseLayout
@@ -31,11 +32,11 @@ const entries = await contentfulClient.getEntries<Project>({})
       <h2
         class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
       >
-        Projects and clone's
+        My Projects
       </h2>
     </TopLayout>
-    <BottomLayout size="xl">
-      <div class="flex w-full flex-wrap justify-center gap-2">
+    <BottomLayout size="2xl">
+      <div class="flex w-full flex-wrap justify-center gap-10">
         {
           entries.items.map((entry: any) => (
             <ProjectCard

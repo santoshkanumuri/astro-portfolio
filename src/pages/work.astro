@@ -21,20 +21,22 @@ import { EXPERIENCE } from '../lib/constants'
         {
           EXPERIENCE.map((entry) => (
             <li class="animate mt-4 border-b border-black/10 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none dark:border-white/25">
-              <div class="mb-4 text-sm uppercase">
+              <div class="md-4 text-sm">
                 {entry.start} - {entry.end}
               </div>
               <a
                 href={entry.link ?? ''}
-                class={`font-semibold ${entry?.link ? 'text-primary' : 'text-foreground'}`}
+                class={`font-semibold ${entry?.link ? 'text-primary' : 'text-foreground'} text-md`}
               >
                 {entry.company}
               </a>
               <div class="text-sm font-semibold">{entry.position}</div>
               <article class="prose dark:prose-invert">
                 {entry.tasks.map((i) => (
-                  <>{i}</>
+                  <p class="text-sm pd-3">{i}</p>
                 ))}
+                <p></p>
+                <p class="text-sm pd-10"><b>Tech Stack: </b><span> {entry.stack}</span></p>
               </article>
             </li>
           ))

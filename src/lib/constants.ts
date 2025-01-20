@@ -1,4 +1,6 @@
+import { start } from 'repl'
 import type { Site, Page } from './types'
+import { GitBranch } from 'lucide-react'
 
 export const loaderAnimation = [
   '.loader',
@@ -7,20 +9,17 @@ export const loaderAnimation = [
 ]
 
 export const LINKS = {
-  github: 'https://github.com/bue221',
-  linkedin: 'https://www.linkedin.com/in/bue221/',
-  mail: 'mailto:camiloplaza3@gmail.com',
-  instagram: 'https://www.instagram.com/caj_ink/',
-  medium: 'https://ladvace.medium.com/',
-  discord: 'https://discordapp.com/users/163300027618295808',
+  github: 'https://github.com/santoshkanumuri',
+  linkedin: 'https://www.linkedin.com/in/santoshkanumuri/',
+  mail: 'mailto:pavan.kanumuri@hotmail.com',
 }
 
 // Global
 export const SITE: Site = {
-  TITLE: 'Astro Sphere',
+  TITLE: 'Santosh Kanumuri',
   DESCRIPTION:
-    'Welcome to Astro Sphere, a portfolio and blog for designers and developers.',
-  AUTHOR: 'Mark Horn',
+    'Portfolio Website of Santosh Kanumuri. Software Engineer, Data Engineer, and Full Stack Developer.',
+  AUTHOR: 'Santosh Kanumuri',
 }
 
 // Work Page
@@ -48,113 +47,90 @@ export const SEARCH: Page = {
 }
 
 // Study Page
+export const CERTS = [
+  {
+    url: 'https://images.credly.com/size/680x680/images/ff52a038-c61e-4088-b434-2e98ef546896/image.png',
+    alt: 'MongoDB Certified Developer Associate',
+    link: 'https://www.credly.com/badges/6e513dad-e9f0-4ed9-a6ec-4d82a243d439/',
+    name: 'MongoDB ',
+    date: '2024',
+  },
+  {
+    url: 'https://images.credly.com/size/680x680/images/2f7b0627-48a0-4894-8d46-3245bdfe0463/image.png',
+    institution: 'AWS Academy Cloud Architecting',
+    link: 'https://www.credly.com/badges/6e513dad-e9f0-4ed9-a6ec-4d82a243d439/linked_in_profile',
+    name: 'AWS ',
+    date: '2022',
+  },
+]
+
 export const STUDIES = [
   {
-    title: 'Computer Science',
-    institution: 'Universidad Central',
-    link: 'https://www.ucentral.edu.co/',
-    date: '2019 - 2027',
-  },
-  {
-    title: '...',
-    institution: 'Platzi',
-    link: 'https://platzi.com/',
-    date: '2018 - 2022',
-  },
-  {
-    title: '...',
-    institution: 'Udemy',
-    link: 'https://www.udemy.com/',
-    date: '2018 - 2022',
-  },
-  {
-    title: '...',
-    institution: 'Youtube',
-    link: 'https://www.youtube.com/@midulive',
-    date: '2018 - 2022',
-  },
-  {
-    title: 'Tattoo Artist',
-    institution: 'Tattoo Academy',
-    link: 'https://www.instagram.com/tattoodcacademy/',
-    date: '2024 - 2025',
+    college: 'Edward E. Whitacre Jr. College of Engineering - Texas Tech University',
+    degree: 'MS',
+    branch: 'Computer Science',
+    link: 'https://www.ttu.edu/',
+    start: '2023',
+    end: '2025',
   },
 ]
 
 export const EXPERIENCE = [
   {
-    company: 'Straico',
-    location: 'Bogotá D C, Colombia',
-    position: 'Software Engineer',
-    start: '2021',
-    link: 'https://straico.com/',
+    company: 'Texas Tech University',
+    location: 'Lubbock, Texas',
+    position: 'Graduate Assistant',
+    start: '2023',
+    link: 'https://ttu.edu/',
     end: 'Current',
     tasks: [
-      'Integration IA services with react and tailwind css',
-      'Development and build of DB with mongoDB',
+      'Enhanced data retrieval efficiency using Python for unstructured data extraction and analysis. ',
+      'Optimized data pipelines for patent and investor datasets with Pandas and MongoDB. ',
+      'Integrated Twitter & YouTube APIs and built Streamlit-based backend services for data visualization. ',
     ],
+    stack: 'Python, Pandas, NumPy, Scikit-Learn, MongoDB, Pinecone, Selenium, Matplotlib, BeautifulSoup.',
   },
   {
-    company: 'Spot2',
-    location: 'Mexico City, Mexico',
-    position: 'Software Engineer',
-    link: 'https://spot2.mx/',
-    start: '2021',
-    end: 'Current',
+    company: 'PricewaterhouseCoopers',
+    location: 'Hyderabad, India',
+    position: 'Developer(Full Stack)',
+    link: 'https://pwc.com/',
+    start: '2022',
+    end: '2023',
     tasks: [
-      'Development of the Spot2 platform with the use of React, Redux, and Material UI',
-      'Development map with the use of Google Maps API',
-      'Development internal platform with the use of React, Redux, and Material UI',
-      'Testing and debugging',
+      'Developed a CitiBank internal target tracker, improving system efficiency and user engagement. ',
+      'Built a centralized platform for task tracking, assignment details, and client feedback. ',
+      'Enhanced workflow automation and communication in project management. ',
     ],
+    stack: 'Python, Django, JavaScript, ReactJS, HTML, CSS, Bootstrap, REST API, Amazon Aurora, Git, Postman, Excel, Docker.',
   },
   {
-    company: 'Imaginamos',
-    link: 'https://imaginamos.com/',
-    location: 'Bogotá D C, Colombia',
-    position: 'Frontend developer',
+    company: 'Systema Automation. Inc',
+    link: 'https://www.systema.com//',
+    location: 'Bangalore, India',
+    position: 'Web Developer Intern',
     start: '2021',
+    end: '2022',
+    tasks: [
+      'Developed a Django-based web app, improving metrics visualization and user engagement. ',
+      'Integrated real-time API data, increasing data accuracy by 25%. ',
+      'Optimized backend services for data retrieval and analysis. ',
+      'Led a team of three developers, delivering projects on schedule.',
+    ],
+    stack: 'Python, Django, JavaScript, APIs, HTML, CSS, Responsive Design.',
+  },
+  {
+    company: 'Veltech University',
+    location: 'Chennai, India',
+    position: 'Student Volunteer(Web Developer)',
+    start: '2021',
+    link: 'https://veltech.edu.in/',
     end: '2021',
     tasks: [
-      'Development of the Imaginamos platform with the use of React, Redux, and Material UI',
-      'Work in ETB project with the use of React, Redux, and Material UI',
+      'Contributed to the development of the Computer Science Department website as part of a team. ',
+      'Implemented a dynamic, user-friendly interface using HTML, CSS, and JavaScript. ',
+      'Applied responsive design principles and interactive features to improve user experience. ',
     ],
-  },
-  {
-    company: 'INETUM',
-    location: 'Bogotá D C, Colombia',
-    position: 'Frontend developer',
-    start: '2021',
-    link: 'https://www.inetum.com/es',
-    end: '2021',
-    tasks: [
-      'Support in the QA area and bug review',
-      'Use of SCRUM methodology',
-      'Claro projects with the use of frameworks and libraries such as react and angular',
-      'Use of redux toolkit as aproposal which allowed a shorter development time when using this tool',
-    ],
-  },
-  {
-    company: 'S I G',
-    location: 'Bogotá D C, Colombia',
-    position: 'Software developer',
-    start: '2021',
-    end: '2021',
-    tasks: [
-      'Development of a dashboard with react admin and chartjs for managing and entering information',
-    ],
-  },
-  {
-    company: 'BOOKII',
-    location: 'Bogotá D C, Colombia',
-    position: 'Software developer',
-    start: '2019',
-    end: '2021',
-    tasks: [
-      'Productive collaborationwiththebackendteamforthecreationofthe conversationalclubs',
-      'Effective coding of conversational clubs following design guide lines and using the Redux statemanager',
-      'Creation of the Bookii page in Spanish and change of texts in cms',
-      'Generation of static posts using Gatsby and the Contentful cms for the Bookii blog',
-    ],
+    stack: 'HTML, CSS, JavaScript, Bootstrap.',
   },
 ]

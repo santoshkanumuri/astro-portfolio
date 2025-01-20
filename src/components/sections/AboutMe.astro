@@ -1,28 +1,81 @@
 ---
-import Card from '../Card.astro'
+import Card from '../Card.astro';
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="Skills">
   <div class="flex flex-col gap-2">
-    <p class="text-sm font-light">
-      Hi, I'm Andrés, a fullstack software developer from Colombia 🇨🇴.
-      <br />
-      <br />
-      My primary tools of choice includes:
-      <ul class="list-inside list-disc">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Astro</li>
-        <li>Python</li>
-        <li>Php</li>
-        <li>Mongo</li>
-        <li>SQL</li>
-        <li>Nodejs</li>
-      </ul>
-    </p>
-    <p class="text-sm font-light">
-      Beyond coding, I'm passionate about tattoo, soccer and traveling. An
-      unusual hobby of mine is play classical music in the guitar or ukulele.
-    </p>
+    <div>
+      <p class="text-sm font-light mb-4">My primary tools of choice include:</p>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-6 h-6"/>
+          <span class="text-xs">Python</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" alt="Django" class="w-6 h-6"/>
+          <span class="text-xs">Django</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-6 h-6"/>
+          <span class="text-xs">Java</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="w-6 h-6"/>
+          <span class="text-xs">Spring</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-6 h-6"/>
+          <span class="text-xs">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-6 h-6"/>
+          <span class="text-xs">React</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro" class="w-6 h-6"/>
+          <span class="text-xs">Astro</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="w-6 h-6"/>
+          <span class="text-xs">SQL</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-6 h-6"/>
+          <span class="text-xs">MongoDB</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="w-6 h-6"/>
+          <span class="text-xs">AWS</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" class="w-6 h-6"/>
+          <span class="text-xs">Docker</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" class="w-6 h-6"/>
+          <span class="text-xs">Selenium</span>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <p class="text-sm font-light">Beyond coding, I am also passionate about:</p>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="../../../public/movie.png" alt="Movies" class="w-6 h-6"/>
+          <span class="text-xs">Movies</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="../../../public/travel.png" alt="Travel" class="w-6 h-6"/>
+          <span class="text-xs">Travelling</span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+          <img src="../../../public/cooking.png" alt="Cooking" class="w-6 h-6"/>
+          <span class="text-xs">Cooking</span>
+        </div>
+      </div>
+    </div>
   </div>
 </Card>
