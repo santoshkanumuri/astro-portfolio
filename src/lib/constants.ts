@@ -58,7 +58,7 @@ export const CERTS = [
   {
     url: 'https://images.credly.com/size/680x680/images/2f7b0627-48a0-4894-8d46-3245bdfe0463/image.png',
     institution: 'AWS Academy Cloud Architecting',
-    link: 'https://www.credly.com/badges/6e513dad-e9f0-4ed9-a6ec-4d82a243d439/linked_in_profile',
+    link: 'https://www.credly.com/badges/c1d41a52-4fa9-4c50-a0a1-1042b9f2d8f7/',
     name: 'AWS ',
     date: '2022',
   },
