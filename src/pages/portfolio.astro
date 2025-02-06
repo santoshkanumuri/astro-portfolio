@@ -16,6 +16,8 @@ interface Project {
     img: EntryFieldTypes.AssetLink
     website: EntryFieldTypes.EntryResourceLink<any>
     repositorio: EntryFieldTypes.EntryResourceLink<any>
+    description: EntryFieldTypes.Text
+    used_skills: EntryFieldTypes.Array<EntryFieldTypes.Symbol>
   }
 }
 
@@ -46,6 +48,7 @@ const entries = await contentfulClient.getEntries<Project>({})
               subheading={entry?.fields?.description}
               imagePath={entry?.fields?.img?.fields?.file.url}
               altText={entry?.fields?.img?.fields.title}
+              skills={entry?.fields?.usedSkills || []}
               class="w-full sm:w-2/5"
             />
           ))

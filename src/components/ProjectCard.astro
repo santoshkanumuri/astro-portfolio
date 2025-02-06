@@ -9,22 +9,37 @@ const {
   subheading,
   imagePath,
   altText,
+  skills
 } = Astro.props
+console.log(skills)
+
 ---
 
-<Tag href={href} class={`${className}`} `>
+<Tag href={href} class={`${className}`}>
   <ShadcnCard
-    className={`transfor-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start overflow-hidden shadow-lg transition duration-75 ease-in-out ${href ? 'cursor-pointer hover:border-primary' : ''} `}
+    className={`group relative w-full max-w-2xl overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:bg-black ${
+      href ? 'cursor-pointer' : ''
+    }`}
   >
-    <img
-      src={imagePath}
-      alt={altText}
-      class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover"
-      loading="eager"
-    />
-    <div class="flex flex-col gap-y-0.5 px-5 py-4">
-      <h1 class="text-lg font-medium">{heading}</h1>
-      <h2 class="text-muted-foreground">{subheading}</h2>
+    <div class="relative aspect-video ">
+      <img
+        src={imagePath}
+        alt={altText}
+        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-102"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black/30 transition-opacity duration-300 group-hover:bg-black/60" />
+    </div>
+
+    <div class="p-6 transition-colors duration-300 group-hover:bg-black group-hover:text-white">
+      <h1 class="text-2xl font-bold transition-colors duration-300 group-hover:text-white">{heading}</h1>
+      <h2 class="mt-2 text-lg text-gray-600 transition-colors duration-300 group-hover:text-gray-300">{subheading}</h2>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {skills.map((skill: string) => (
+          <span class="text-sm bg-orange-400 text-white-800 px-2 py-1 rounded-full" >
+            {skill}
+          </span>
+        ))}
     </div>
 
     <slot />
